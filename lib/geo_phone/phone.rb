@@ -29,7 +29,6 @@ module GeoPhone
         current_offset =  middle * INDEX_LENGTH
         return if current_offset + Database.instance.index_offset >= Database.instance.file_size
         cur_phone, record_offset, phone_type = Database.instance.index[current_offset..(current_offset+INDEX_LENGTH)].unpack(INDEX_FMT)
-        p "#{cur_phone}, #{record_offset}, #{phone_type}"
         if cur_phone > int_phone
           right = middle - 1
         elsif cur_phone < int_phone
