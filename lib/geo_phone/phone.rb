@@ -50,7 +50,7 @@ module GeoPhone
 
     private
     def validate
-      raise InvalidPhoneError.new(@phone) unless @phone =~ /\A^(0|86|17951)?(13[0-9]|15[0-9]|17[678]|18[0-9]|14[57])[0-9]{8}\z/i
+      raise InvalidPhoneError.new(@phone) unless @phone =~ /\A^(0|86|17951)?(13[0-9]|15[0-9]|17[0-9]|18[0-9]|14[0-9])[0-9]{8}\z/i
     end
   end
 end
